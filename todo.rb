@@ -3,15 +3,16 @@ done_f = "done.txt"
 
 require_relative 'lib'
 
-tasks = show(started_f)
+open = list(started_f)
 
 # list open tasks
 puts "Tasks to complete:"
-puts tasks
+puts open
 
 puts "Select action:"
-puts "1. Add a new task."
-puts "2. Mark a task as completed."
+puts "1. Add new task."
+puts "2. Mark task as completed."
+puts "3. Show completed tasks."
 
 action = gets.chomp
 
@@ -30,7 +31,13 @@ elsif action.to_i == 2
   task = gets.chomp.to_i
 
   complete(started_f, done_f, task)
+
+elsif action.to_i == 3
+
+  completed = list(done_f)
+  puts "Completed tasks:", completed
+
 end
 
-tasks = show(started_f)
-puts "Tasks to complete:\n", tasks
+open = list(started_f)
+puts "Tasks to complete:", open

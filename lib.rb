@@ -11,7 +11,7 @@ def index(file)
 
 end
 
-def show(file)
+def list(file)
   
   tasks = index(file)
 
@@ -37,7 +37,7 @@ end
 def complete(source, target, task)
   
   tasks = index(source)
-  
+
   # delete completed task from task array and write the new array to open tasks file
   tasks.delete_at(task-1)
   create(source, tasks, "w+")
