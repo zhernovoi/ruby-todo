@@ -1,4 +1,4 @@
-A simple command line Todo list in Ruby
+A simple cli todo list in Ruby
 ==
 
 Features
